@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col mt-5 mb-5 ">
+            <div *ngIf="!isHidden" class="alert alert-success" role="alert">
+                Course has been deleted
+                <button type="button" (click)="dismiss()"
+                    style="background-color: transparent;border: 0;padding-left: 70%;" class="close "
+                    data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <button class="btn btn-primary btn-sm mx-2" routerLink="addCourse">Add Course</button>
+            <br><br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">id</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let course of courses">
+                        <td><img src="data:image/png;base64,{{ course.imageBase64 }}"
+                                style="max-width: 150px; max-height: 150px; border: 1px solid #ddd;" alt="Image"></td>
+                        <td scope="row">{{ course.id }}</td>
+                        <td>{{ course.title }} </td>
+                        <td>{{ course.description }} </td>
+                        <td>{{ course.price }} </td>
+
+                        <td><button class="btn btn-warning btn-sm " routerLink="edit/{{ course.id}}">update</button>
+                            <button class="btn btn-danger btn-sm ms-2" (click)="deletecourse(course.id)">delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

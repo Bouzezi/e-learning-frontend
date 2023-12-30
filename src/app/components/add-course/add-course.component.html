@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col mt-5 mb-5 ">
+            <div *ngIf="!isHidden" class="alert alert-success" role="alert">
+                Course added
+                <button type="button" (click)="dismiss()"
+                    style="background-color: transparent;border: 0;padding-left: 70%;" class="close "
+                    data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container mt-3">
+                <h2>Add Course</h2>
+                <form [formGroup]="addCourseForm" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" formControlName="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" formControlName="description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="price" formControlName="price">
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="yourFileInputId" (change)="onFileChange($event)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Course</button>
+                    <button class="btn btn-dark ms-3" (click)="reset()">Annuler</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

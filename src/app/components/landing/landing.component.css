@@ -1,0 +1,148 @@
+.logo{
+    margin-left: 20px;
+}
+
+#header {
+    position: relative;
+    background: url('../../../assets/images/ima.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #000;
+    padding: 150px 20px;
+    height: 550px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#header h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+}
+
+#header p {
+    font-size: 18px;
+}
+
+#register-btn {
+    background-color: #e12767;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#courses {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#discover {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.discover-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+}
+
+.course-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-card-body {
+    padding: 20px;
+}
+.course-card-body h4{
+    font-weight: bold;
+}
+.course-card-body p{
+    color:#e12767;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#contact {
+    background-color: #ccd34d;
+    border-radius: 80px;
+    padding: 31px 0;
+    width: 70%;
+    margin: auto; 
+    margin-top: 20px; 
+    margin-bottom: 100px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.content{
+    width:50%;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.form-group input {
+    border-radius: 40px;
+    padding: 20px;
+}
+.form-group textarea  {
+    border-radius: 40px;
+    padding: 20px;
+}
+.btn-pink {
+    background-color: #e12767;
+    border-radius: 30px;
+    width:130px;
+    color: #fff;
+}
+.submit-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-contact {
+    background-color: #e12767;
+    border-radius: 5px;
+    padding: 10px 50px;
+    color: #fff;
+    font-weight: bold;
+}
+.btn-pink:hover,
+.btn-contact:hover {
+    background-color: #e12767;
+    color: #fff; 
+}

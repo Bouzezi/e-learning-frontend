@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="../../../assets/images/the-Bridge.png" alt="Logo">
+    </div>
+    <div id="header">
+        <div class="overlay">
+            <h2>Improve your skills on your own <br>
+                To prepare for a better future</h2>
+            <button id="register-btn" class="btn">REGISTER NOW</button>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div id="courses">
+        <div class="container">
+            <div id="discover">
+                <div>
+                    <p class="discover-title">Discover our Courses</p>
+                </div>
+                <div>
+                    <button class="btn btn-pink">View More</button>
+                </div>
+            </div>
+
+            <!-- Course Cards -->
+            <div class="row">
+                <div class="col-md-4" *ngFor="let course of courses$ | async">
+                    <div class="course-card">
+                        <img src="data:image/png;base64,{{ course.imageBase64 }}" alt="Image">
+                      <div class="course-card-body">
+                        <h4>{{ course.title }}</h4>
+                        <p>{{ course.price }} DT/ Month</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">NAME</label>
+                    <input type="text" class="form-control" id="name" placeholder="Jiara Martins">
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" class="form-control" id="email" placeholder="hello@reallygreatsite.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">MESSAGE</label>
+                    <textarea class="form-control" id="message" rows="4"
+                        placeholder="Write your message here"></textarea>
+                </div>
+                <div class="submit-btn">
+                    <button type="button" class="btn btn-contact">Send the Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
